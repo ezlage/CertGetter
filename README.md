@@ -93,6 +93,7 @@ Steps and scripts for importing and applying certificates on Linux and Windows s
 
 #### Under development or planned to be developed
 
+- Modify CertGetter.sh to generate log
 - Scripts to import and apply certificates on Linux Servers
 - Scripts to import and apply certificates on Windows Servers
 
