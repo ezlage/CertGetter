@@ -98,18 +98,22 @@ Steps and scripts for importing and applying certificates on Linux and Windows s
 
 #### v0.0.0.0: First public incomplete pre-release
 
+- Step-by-step for configuring ACME in pfSense
+- Step-by-step to install CertGetter in pfSense
+- Script to convert and export certificates within pfSense
+
 ### License, credits, feedback and donation
 
-[BSD 3-Clause "New" or "Revised" License](./LICENSE.md)
-Developed by [Ezequiel Lage](https://twitter.com/ezlage), Sponsored by [Lageteck](https://lageteck.com)
-Any and all suggestions, criticisms and contributions are welcome!
-Get in touch via Issues, Discussions and Pull Requests
+[BSD 3-Clause "New" or "Revised" License](./LICENSE.md)  
+Developed by [Ezequiel Lage](https://twitter.com/ezlage), Sponsored by [Lageteck](https://lageteck.com)  
+Any and all suggestions, criticisms and contributions are welcome!  
+Get in touch via Issues, Discussions and Pull Requests  
 
 #### Support this initiative!
 
-BTC: 1Nw2fzDgtXM5X219Q9VtJ7WaSTDPua3oe8
-DASH: XeEuQk3za87DTtNZGkriRXMAJPoMbXNjUA
-LTC: LgMYNhUREb2kgXpBXoybgjtJM7QSNZKs14
-ZEC: t1dtNs9nNphKdLrro3JPzvE2r5E48doboM1
-ERC20*: 0xbc024170e10e097140d4be5c30fd4ed6220cfb57
-\* Any ERC20 token supported by Binance (ETH, USDC, USDT, etc)
+BTC: 1Nw2fzDgtXM5X219Q9VtJ7WaSTDPua3oe8  
+DASH: XeEuQk3za87DTtNZGkriRXMAJPoMbXNjUA  
+LTC: LgMYNhUREb2kgXpBXoybgjtJM7QSNZKs14  
+ZEC: t1dtNs9nNphKdLrro3JPzvE2r5E48doboM1  
+ERC20*: 0xbc024170e10e097140d4be5c30fd4ed6220cfb57  
+\* Any ERC20 token supported by Binance (ETH, USDC, USDT, etc)  
