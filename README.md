@@ -63,7 +63,7 @@ A set of scripts to automate the delivery of Let's Encrypt wildcard certificates
 
 11. As shown in the image below, copy the value and name of the record (usually **_acme-challenge** as name and some random alphanumeric as value)
 
-![ACME Issuance](./docs/issue-screenshot.png?raw=true  "ACME Issuance")
+![ACME Issuance](./docs/issue-screenshot.png?raw=true)
 
 12. Change the DNS zone to be certified by creating a TXT-type record with the name and value obtained (in some cases it may be necessary to increment the zone's serial manually)
 
@@ -85,7 +85,7 @@ A set of scripts to automate the delivery of Let's Encrypt wildcard certificates
 
 14. Get back to **Services\ACME Certificates\Certificates** and click in **Renew** for the newly created certificate; If you receive the certificate data in Base64, as in the image below, it worked!
 
-![ACME Renewal](./docs/renew-screenshot.png?raw=true  "ACME Renewal")
+![ACME Renewal](./docs/renew-screenshot.png?raw=true)
 
 Steps and scripts for importing and applying certificates on Linux and Windows servers will be added here soon.
 
