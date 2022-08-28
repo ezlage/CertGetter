@@ -93,9 +93,12 @@ Steps and scripts for importing and applying certificates on Linux and Windows s
 
 #### Under development or planned to be developed
 
-- Modify CertGetter.sh to generate log
 - Scripts to import and apply certificates on Linux Servers
 - Scripts to import and apply certificates on Windows Servers
+
+#### v0.0.0.1: Script for pfSense now logs messages
+
+- **certgetter.sh** for pfSense has been modified to save logs
 
 #### v0.0.0.0: First public incomplete pre-release
 
