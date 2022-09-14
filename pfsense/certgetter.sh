@@ -9,11 +9,11 @@
 readonly now=$(date +'on %F at %T (%Z)');
 readonly scriptname="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 readonly scriptpath="$(dirname "$0")"
-readonly username="$(basename "$scriptname" .sh)"
-readonly homepath="/home/$username"
+readonly servicename="$(basename "$scriptname" .sh)"
+readonly homepath="/home/$servicename"
 readonly destination="$homepath/$3"
 readonly acmesourcep="/tmp/acme/$1/$2"
-readonly logfile="$scriptpath/$username.log"
+readonly logfile="$scriptpath/$servicename.log"
 logprefix="[CertGetter $now]"
 logsuffix="\n"
 copyfailed=false
@@ -26,7 +26,7 @@ showandsave() {
 }
 
 ([ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]) && {
-    showandsave "Correct usage: $scriptname \"acme_account_name\" \"domain_primary_name\" \"destination_name\""
+    showandsave "Correct usage: $scriptname \"acme-account-name\" \"domain-primary-name\" \"local-destination-name\""
     exit 3
 }
 
@@ -40,13 +40,13 @@ showandsave() {
     exit 5
 }
 
-getent passwd $username > /dev/null || {
-    showandsave "User \"$username\" must exist!"
+getent passwd $servicename > /dev/null || {
+    showandsave "User \"$servicename\" must exist!"
     exit 6
 }
 
 [ -d "$homepath" ] || {
-    showandsave "A profile directory for \"$username\" must exist inside \"\\home\"!"
+    showandsave "A profile directory for \"$servicename\" must exist inside \"\\home\"!"
     exit 7
 }
 
@@ -75,8 +75,8 @@ mkdir -p "$destination" || {
     exit 12
 }
 
-cmp -s "$acmesourcep/ca.cer" "$destination/$3_ca.cer" || havechanges=true
-cmp -s "$acmesourcep/fullchain.cer" "$destination/$3_fc.cer" || havechanges=true
+cmp -s "$acmesourcep/ca.cer" "$destination/$3-ca.cer" || havechanges=true
+cmp -s "$acmesourcep/fullchain.cer" "$destination/$3-fc.cer" || havechanges=true
 cmp -s "$acmesourcep/$2.cer" "$destination/$3.cer" || havechanges=true
 cmp -s "$acmesourcep/$2.key" "$destination/$3.key" || havechanges=true
 cmp -s "$acmesourcep/$2.p12" "$destination/$3.p12" || havechanges=true
@@ -98,8 +98,8 @@ openssl pkcs12 -export \
     exit 13
 }
 
-cp "$acmesourcep/ca.cer" "$destination/$3_ca.cer" || copyfailed=true
-cp "$acmesourcep/fullchain.cer" "$destination/$3_fc.cer" || copyfailed=true
+cp "$acmesourcep/ca.cer" "$destination/$3-ca.cer" || copyfailed=true
+cp "$acmesourcep/fullchain.cer" "$destination/$3-fc.cer" || copyfailed=true
 cp "$acmesourcep/$2.cer" "$destination/$3.cer" || copyfailed=true
 cp "$acmesourcep/$2.key" "$destination/$3.key" || copyfailed=true
 cp "$acmesourcep/$2.p12" "$destination/$3.p12" || copyfailed=true
@@ -109,7 +109,7 @@ cp "$acmesourcep/$2.p12" "$destination/$3.p12" || copyfailed=true
     exit 14
 }
 
-chown -R $username:nobody "$destination" || permfailed=true
+chown -R $servicename:nobody "$destination" || permfailed=true
 chmod -R 744 "$destination" || permfailed=true
 
 [ "$permfailed" = false ] || {
@@ -117,5 +117,5 @@ chmod -R 744 "$destination" || permfailed=true
     exit 15
 }
 
-showandsave "All right, the latest certificate is available for delivery via SCP or RSYNC!"
+showandsave "Okay, the latest certificate is available for delivery via SCP or RSYNC!"
 exit 0
