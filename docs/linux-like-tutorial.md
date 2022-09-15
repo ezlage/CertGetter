@@ -2,7 +2,7 @@
 
 This step-by-step guide teaches you how to automate the delivery of certificates and how to reload the necessary services on Linux or similar operating systems.
 
-1. Access the server via SSH, make sure name resolution is working and there is network connectivity, then install SCP, RSYNC and cUR
+1. Access the server via SSH, make sure name resolution is working and there is network connectivity, then install SCP, RSYNC and cURL
 
 2. In the terminal, copy and run each of the command blocks below, one at a time
 
@@ -46,7 +46,7 @@ This step-by-step guide teaches you how to automate the delivery of certificates
 	```
 
 	```sh
-	# This will do the same as the previous command and still reload Nginx
+	# This will do the same as the previous command and also reload Nginx
 	0 4 * * * /root/certgetter/certgetter.sh "acme-server" "remote-source-name"; nginx -t && nginx -s reload
 	```	
 
@@ -55,7 +55,7 @@ This step-by-step guide teaches you how to automate the delivery of certificates
 	0 4 * * * /root/certgetter/certgetter.sh "acme-server" "remote-source-name"; apachectl -t && apachectl graceful
 	```	
 
-	In some cases it may be necessary to invoke **nginx** or **apachectl** using the full path.	
+	Note: In some cases it may be necessary to invoke **nginx** or **apachectl** using the full path.	
 
 6. Now, just configure your TLS/SSL based services and applications to load the public and private key files from **/etc/certgetter**!
 

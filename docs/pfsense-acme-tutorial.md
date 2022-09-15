@@ -52,7 +52,7 @@ This step-by-step guide teaches you how to generate wildcard certificates with c
 
 11. As shown in the image below, copy the value and name of the record (the name is usually prefixed with **_acme-challenge** and the value is some random alphanumeric)
 
-![ACME Issuance](./pfsense-acme-issue.png?raw=true)
+![ACME Issuance](https://media.githubusercontent.com/media/ezlage/CertGetter/main/docs/pfsense-acme-issue.png?raw=true)
 
 12. Change the DNS zone to be certified by creating a TXT-type record with the name and value obtained (in some cases it may be necessary to manually increment the zone serial); Make sure not to issue the certificate again, so that the same record remains valid, and do not delete such record from the DNS zone
 
@@ -76,7 +76,7 @@ This step-by-step guide teaches you how to generate wildcard certificates with c
 
 14. Get back to **"Services\ACME Certificates\Certificates"** and click in **Renew** for the newly created certificate; If you receive the certificate data in Base64, as in the image below, it worked!
 
-![ACME Renewal](./pfsense-acme-renew.png?raw=true)
+![ACME Renewal](https://media.githubusercontent.com/media/ezlage/CertGetter/main/docs/pfsense-acme-renew.png?raw=true)
 
 15. Please review the **"Login Protection"** section under **"System\Advanced\Admin Access"** as the settings there may block consecutive sync attempts and also cause some failures in the future
 
