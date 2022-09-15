@@ -57,6 +57,8 @@ This step-by-step guide teaches you how to automate the delivery of certificates
 
 	In some cases it may be necessary to invoke **nginx** or **apachectl** using the full path.	
 
+6. Now, just configure your TLS/SSL based services and applications to load the public and private key files from **/etc/certgetter**!
+
 7. Done, but keep an eye on **/root/certgetter/certgetter.log** file! Also, remember to contribute by reporting problems or suggesting improvements.
 
 ### License, credits, feedback and donation
