@@ -24,7 +24,7 @@ A set of scripts to automate the delivery of Let's Encrypt certificates issued t
 - Facilities for collecting and centralizing logs
 - Script to import and apply certificates in Windows
 - Scripts to generate log and facilitate reloading of services that use the certificates
-- Small adaptations to enable automated delivery of non-Let's Encrypt certificates.
+- Small adaptations to enable automated delivery of non-Let's Encrypt certificates
 - The entire process was done with some haste, so refactorings will still be necessary, including making the code more semantic and intelligible
 - Tutorial to import and apply certificates automatically in Windows
 

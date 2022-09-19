@@ -11,7 +11,7 @@ This step-by-step guide teaches you how to automate the delivery of certificates
 	```
 
 	```sh
-	sudo curl -s https://raw.githubusercontent.com/ezlage/CertGetter/main/linux/certgetter.sh > /root/certgetter/certgetter.sh
+	sudo -i -- sh -c 'curl -s https://raw.githubusercontent.com/ezlage/CertGetter/main/linux/certgetter.sh > /root/certgetter/certgetter.sh'
 	```
 
 	```sh
