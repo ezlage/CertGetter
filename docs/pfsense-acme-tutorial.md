@@ -82,6 +82,8 @@ This step-by-step guide teaches you how to generate wildcard certificates with c
 
 16. Done, but keep an eye on **/root/certgetter/certgetter.log** file! Also, remember to contribute by reporting problems or suggesting improvements.
 
+	Note: If you restart pfSense you will need to manually issue and renew the certificate again, as the files in the **/tmp/acme** will be lost. A study to circumvent this is underway!
+
 ### License, credits, feedback and donation
 
 [BSD 3-Clause "New" or "Revised" License](../LICENSE.md)  
