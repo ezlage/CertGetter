@@ -28,7 +28,7 @@ This step-by-step guide teaches you how to automate the delivery of certificates
 	sudo cat /root/.ssh/id_rsa.pub
 	```
 
-4. Run CertGetter for the first time by replacing **"acme-server"** with the FQDN or IP of the ACME server and **"remote-source-name"** with the certificate set name
+4. Run CertGetter for the first time by replacing **"acme-server"** with the FQDN or IP of the ACME server and **"remote-source-name"** with the certificate set name (the "local-destination-name" used in CertGetter configuration in pfSense)
 
 	```sh
 	sudo /root/certgetter/certgetter.sh "acme-server" "remote-source-name"
